@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Jane Technical Frontend Interview
 
-## Available Scripts
+Hi! Hey thanks for doing this. It shouldn't take more than an hour. Let's get everything working before the interview starts.
 
-In the project directory, you can run:
+## Installation
 
-### `yarn start`
+### Cloning the repo to your local machine
+If you received an archive of the assessment, skip this section
+1. Click on the green `Clone or download` button above, and switch to HTTPS if the default is SSH. Copy the url.
+2. Clone this repo into a folder on your box: `git clone [url] [folder]`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Run the assessment in your browser
+You will need npm or yarn installed and working.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Open the folder containing the assessment: `cd [folder]`
+2. Run `yarn` or `npm install`
+3. Run `yarn start` or `npm run start`
 
-### `yarn test`
+## Instructions
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+At Jane we do a lot on the frontend. We care deeply about user experience, performance, and readability. We've provided a skeleton React component that is meant to help users fill in the City field in an address form.
 
-### `yarn build`
+Build out the CityField component to satisfy the following:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Function
+  1. As text is typed into the input field, a list of suggested city names should render above/below it. We've provided a list of Canadian city names to use in [`canadian_cities.js`](src/canadian_cities.js).
+  2. Suggested city names contain the string entered into the input field (case insensitive).
+  3. The list should be keyboard navigable.
+  4. The list items should be selectable by mouse click or hitting the enter key.
+  5. The list of suggestions should NOT show when the input is less than two characters.
+  6. **Bonus/optional:** The list of suggestions should disappear when the user clicks or presses enter on a suggestion.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Style
+  1. Center the label and input field horizontally and vertically in the viewport window.
+  2. When the input value matches a Canadian city name, change the background color to green smoothly (fade) over half a second.
