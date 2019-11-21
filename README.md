@@ -20,6 +20,8 @@ You will need npm or yarn installed and working.
 
 At Jane we do a lot on the frontend. We care deeply about user experience, performance, and readability. We've provided a skeleton React component that is meant to help users fill in the City field in an address form.
 
+Feel free to create new components, and/or use any npm packages you like. Also, you may commit directly to master, up to you.
+
 Build out the CityField component to satisfy the following:
 
 ### Function
@@ -28,7 +30,7 @@ Build out the CityField component to satisfy the following:
   3. The list should be keyboard navigable.
   4. The list items should be selectable by mouse click or hitting the enter key.
   5. The list of suggestions should NOT show when the input is less than two characters.
-  6. **Bonus/optional:** The list of suggestions should disappear when the user clicks or presses enter on a suggestion.
+  6. The list of suggestions should disappear when the user clicks or presses enter on a suggestion.
 
 ### Style
   1. Center the label and input field horizontally and vertically in the viewport window.
