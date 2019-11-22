@@ -20,7 +20,7 @@ You will need npm or yarn installed and working.
 
 At Jane we do a lot on the frontend. We care deeply about user experience, performance, and readability. We've provided a skeleton React component that is meant to help users fill in the City field in an address form.
 
-Feel free to create new components, and/or use any npm packages you like. Also, you may commit directly to master, up to you.
+Feel free to create new components, and commit directly to master if you like. You can use any npm packages you like, but bonus points if you don't reach for an external package.
 
 Build out the CityField component to satisfy the following:
 
