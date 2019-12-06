@@ -1,3 +1,8 @@
-.cityField {
+.input {
   background-color: #efefef;
+}
+
+.Bottom {
+  position: absolute;
+  bottom: 0;
 }

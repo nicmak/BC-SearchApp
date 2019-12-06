@@ -4,17 +4,30 @@ import canadianCities from './canadian_cities';
 
 const App = (props) => (
   <div className='App'>
-    <label>City Name:</label>
-    <CityField />
+    <Window />
+    <Bottom status='status' />
   </div>
 );
 
-const CityField = (props) => (
-  <>
-    <input
-      className='cityField'
-    />
-  </>
+const Window = () => (
+  <div data-testid='Window'>
+    <label>City Name:</label>
+    <cityField />
+  </div>
 );
 
-export default App;
+const cityField = () => (
+  <div data-testid='Input'>
+    <input
+      className='input'
+    />
+  </div>
+);
+
+const Bottom = (status) => (
+  <div data-testid='Bottom' className='Bottom'>
+    <span>status: {status}</span>
+  </div>
+)
+
+export default App
