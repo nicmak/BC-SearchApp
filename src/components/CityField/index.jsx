@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useCallback } from 'react';
+import React, { useState, useEffect, useContext, useCallback, useRef } from 'react';
 import debounce from 'lodash.debounce';
 import { CityContext } from '../../context/CityContext';
 import {
@@ -26,6 +26,7 @@ const CityField = () => {
     suggestedCities
   } = stateFromReducer;
 
+  const inputRef = useRef(null);
   const [ disableMouse, setMouseDisable ] = useState(false);
   const detectMouse = useCallback(() => setMouseDisable(false), [setMouseDisable])
 
@@ -47,6 +48,8 @@ const CityField = () => {
       dispatch({ type: SUGGESTED_CITIES, suggestedCities: suggested })
     } else {
       dispatch({ type: SUGGESTED_CITIES, suggestedCities: [] })
+      dispatch({ type: SELECTED_CITY, city: '' })
+      dispatch({ type: MATCH_RESULT, result: false })
     }
   }
 
@@ -94,6 +97,7 @@ const CityField = () => {
 
   const selectCity = (city) => {
     dispatch({ type: INPUT_TEXT, text: city })
+    inputRef.current.focus();
   }
 
   const selectCurrentIndex = (index) => {
@@ -154,7 +158,8 @@ const CityField = () => {
         data-testid="input"
       >
         <InputContainer
-          placeholder="Explore British Columbia..."
+          ref={inputRef}
+          placeholder="Explore British Columbia or Ontario..."
           value={cityInput}
           onKeyDown={(e) => keyDownEvents(e)}
           onChange={(e) => handleCityFieldInput(e)}
